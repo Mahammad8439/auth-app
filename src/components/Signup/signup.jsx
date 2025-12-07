@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { supabase } from "../../client";
 import { Link, useNavigate } from "react-router-dom";
 
+import bg from '../../images/auth-background.jpg';
+
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -51,7 +53,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200" style={{backgroundImage:"url('/src/images/auth-background.jpg' )",backgroundSize:"cover"}}>
+    <div className="min-h-screen flex items-center justify-center bg-gray-200" style={{backgroundImage:`url(${bg})`,backgroundSize:"cover"}}>
       <div className="bg-white w-96 rounded-lg p-8 shadow-lg">
         <h1 className="text-3xl font-bold text-center mb-4">Signup</h1>
 
