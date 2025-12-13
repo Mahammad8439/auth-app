@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { supabase } from "../../client";
 import { useNavigate } from "react-router-dom";
 
+import bgHome from "../../images/background-home.jpg";   
+
 const Home = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
@@ -22,8 +24,8 @@ const Home = () => {
   if (!user) return null;
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center" style={{backgroundImage:`url(${bgHome})`,backgroundSize:"cover"}} >
+      <h1 className="text-3xl font-bold text-white">
         Welcome, {user.user_metadata.full_name} 👋
       </h1>
 
